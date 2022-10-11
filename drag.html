@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DragNDrop Demo</title>
+<style>
+body{
+width: 50%;
+margin: 0 auto;
+background-color: salmon;
+}
+#container-1, #container-2{
+display: inline-block;
+width: 320px;
+height: 320px;
+border: 0.2em solid black;
+margin: 50px 10px;
+background-color: whitesmoke;
+border-radius: 10px 20px;
+}
+#image:hover{
+border: 0.4em dashed blue !important;
+}
+#image{
+}
+</style>
+</head>
+<body>
+<script src="../js/main.js"></script>
+<div id="container-1" ondragover="allowDrop(event)"
+ondrop="drop(event)">
+<div id="image" draggable="true" ondragstart="drag(event)">
+</div>
+</div>
+<div id="container-2" ondragover="allowDrop(event)"
+ondrop="drop(event)">
+</div>
+</body>
+</html>

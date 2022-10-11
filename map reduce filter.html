@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Map Reduce and Filter</title>
+</head>
+<body>
+<p>The initial array is:<span id="ia"></span></p>
+<p>The array obtained by map is :<span id="ma"></span></p>
+<p>The array after filter is :<span id="fa"></span></p>
+<p>The sum of elements in array is:<span id="ra"></span></p>
+<script type="text/javascript">
+var a=[23,45,12,56,76,32,54,49];
+document.getElementById("ia").innerHTML=a;
+var ma=a.map(mfunction);
+function mfunction(num){
+return num*2;
+}
+document.getElementById("ma").innerHTML=ma;
+var fa=a.filter(ffunction);
+function ffunction(num){
+return num>=35;
+}
+document.getElementById("fa").innerHTML=fa;
+var total=a.reduce(rfunction,0);
+function rfunction(t,num){
+return t+Math.round(num);
+}
+document.getElementById("ra").innerHTML=total;
+</script>
+</body>
+</html>
